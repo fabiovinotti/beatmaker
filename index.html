@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Online Beat Maker | Make Beats Online</title>
+  <meta name="description" content="">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./favicon-512x512.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./dependencies/fontawesome/css/all.css" defer>
+
+  <!-- JavaScript  -->
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+
+      <div class="site-title">
+        <span>Beat Maker</span>
+      </div>
+
+      <div id="controls" style="width: 200px; display: flex; align-items: center; justify-content: space-between;">
+        <keen-button id ="play-button" toggles><i class="fas fa-play"></i></keen-button>
+        <number-field min="10" max="250" id="bpm-input" show-controls></number-field>
+        <!--<keen-slider id="bpm-slider"></keen-slider>-->
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="wrap">
+      <pattern-editor></pattern-editor>
+    </div>
+  </main>
+</body>
+</html>
