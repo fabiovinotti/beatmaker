@@ -14,25 +14,18 @@ export default class Sample {
     return nameWithPeriod.slice(0, -1);
   }
 
-  _loadSample( url ) {
-    const request = new XMLHttpRequest();
-    request.responseType = 'arraybuffer';
+  _loadSample(url) {
+    fetch(url)
+    .then(res => {
+      try {
+        if (!res.ok) throw new Error('Network response');
+        return res.arrayBuffer();
 
-    // Event listener - When the response is available.
-    request.onload = () => {
-      const audioData = request.response;
-
-      store.audioContext.decodeAudioData(audioData)
-      .then(decodedData => this.decodedAudioData = decodedData);
-    }
-
-    // Event listener - When an errorr occur.
-    request.error = () => {
-      console.log( 'An error occurred while transferring the file.' );
-    }
-
-    request.open('GET', url, true);
-    request.send();
+      } catch(error) {
+        console.log('Fetch error: ' + error.message);
+      }
+    })
+    .then(audioData => store.audioContext.decodeAudioData(audioData, decodedData => this.decodedAudioData = decodedData));
   }
 
   play(executionTime) {
