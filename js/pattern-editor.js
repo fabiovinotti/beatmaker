@@ -7,6 +7,7 @@ pattern-editor {
   grid-template-columns: 100px repeat(16, 1fr);
   grid-auto-rows: minmax(25px, 35px);
   gap: 1px;
+  grid-gap: 1px; /* Safari */
   justify-content: stretch;
   align-items: stretch;
 }
