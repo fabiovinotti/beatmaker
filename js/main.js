@@ -48,21 +48,21 @@ store.masterVolume.connect(store.audioContext.destination);
 /*masterVolumeSlider.value = 75;*/
 
 // Create samples.
-store.samples[0] = new Sample('http://localhost:8888/beatmaker/kit-electro/Kick 1.wav');
-store.samples[1] = new Sample('http://localhost:8888/beatmaker/kit-electro/Kick 2.wav');
-store.samples[2] = new Sample('http://localhost:8888/beatmaker/kit-electro/Snare 1.wav');
-store.samples[3] = new Sample('http://localhost:8888/beatmaker/kit-electro/Snare 2.wav');
-store.samples[4] = new Sample('http://localhost:8888/beatmaker/kit-electro/Snare 3.wav');
-store.samples[5] = new Sample('http://localhost:8888/beatmaker/kit-electro/Closed HH 1.wav');
-store.samples[6] = new Sample('http://localhost:8888/beatmaker/kit-electro/Closed HH 2.wav');
-store.samples[7] = new Sample('http://localhost:8888/beatmaker/kit-electro/Closed HH 3.wav');
-store.samples[8] = new Sample('http://localhost:8888/beatmaker/kit-electro/Open HH 1.wav');
-store.samples[9] = new Sample('http://localhost:8888/beatmaker/kit-electro/Open HH 2.wav');
-store.samples[10] = new Sample('http://localhost:8888/beatmaker/kit-electro/Cymbal.wav');
-store.samples[11] = new Sample('http://localhost:8888/beatmaker/kit-electro/Tom 1.wav');
-store.samples[12] = new Sample('http://localhost:8888/beatmaker/kit-electro/Tom 2.wav');
-store.samples[13] = new Sample('http://localhost:8888/beatmaker/kit-electro/Tom 3.wav');
-store.samples[14] = new Sample('http://localhost:8888/beatmaker/kit-electro/Tom 4.wav');
+store.samples[0] = new Sample('./kit-electro/Kick 1.wav');
+store.samples[1] = new Sample('./kit-electro/Kick 2.wav');
+store.samples[2] = new Sample('./kit-electro/Snare 1.wav');
+store.samples[3] = new Sample('./kit-electro/Snare 2.wav');
+store.samples[4] = new Sample('./kit-electro/Snare 3.wav');
+store.samples[5] = new Sample('./kit-electro/Closed HH 1.wav');
+store.samples[6] = new Sample('./kit-electro/Closed HH 2.wav');
+store.samples[7] = new Sample('./kit-electro/Closed HH 3.wav');
+store.samples[8] = new Sample('./kit-electro/Open HH 1.wav');
+store.samples[9] = new Sample('./kit-electro/Open HH 2.wav');
+store.samples[10] = new Sample('./kit-electro/Cymbal.wav');
+store.samples[11] = new Sample('./kit-electro/Tom 1.wav');
+store.samples[12] = new Sample('./kit-electro/Tom 2.wav');
+store.samples[13] = new Sample('./kit-electro/Tom 3.wav');
+store.samples[14] = new Sample('./kit-electro/Tom 4.wav');
 
 const soundSlots = document.querySelectorAll('.sound-slot');
 for (let i = 0; i < 15; i++) {
