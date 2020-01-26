@@ -61,7 +61,7 @@ class PatternEditor extends HTMLElement {
     styleElt.textContent = styleTextContent;
     this.appendChild(styleElt);
 
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < 15; i++) {
       this.appendChild(this._createPatternEditorRow(i));
     }
 
